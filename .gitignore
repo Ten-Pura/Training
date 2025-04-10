@@ -1,3 +1,7 @@
+#Compiled mvn file
+target/
+
+
 # Compiled class file
 *.class
 
