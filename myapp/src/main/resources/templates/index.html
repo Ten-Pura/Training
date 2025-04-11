@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" xmls:th="http://www.thymeleaf.org">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,5 +8,10 @@
     <body>
         <h1>Welcom to My Spring Boot Web App!</h1>
         <p>This is the index page.</p>
+        <div>
+            <p>リンク</p>
+            <a th:href="@{/form}">入力フォーム</a>
+            <a th:href="@{/board}">掲示板</a>
+        </div>
     </body>
 </html>
