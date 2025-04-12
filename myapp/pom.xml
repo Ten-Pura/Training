@@ -30,6 +30,13 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
+
+    <!-- Spring Data JPA-->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+
     <!-- Thymeleafテンプレートエンジン -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
@@ -42,6 +49,19 @@
         <artifactId>h2</artifactId>
         <scope>runtime</scope>
     </dependency>
+
+    <!-- jakarta.persistence API -->
+    <dependency>
+      <groupId>jakarta.persistence</groupId>
+      <artifactId>jakarta.persistence-api</artifactId>
+      <version>3.1.0</version>
+    </dependency>
+
+  <dependency>
+    <groupId>org.xerial</groupId>
+    <artifactId>sqlite-jdbc</artifactId>
+    <version>3.43.2.1</version> <!-- バージョンは任意 -->
+  </dependency>
 
   </dependencies>
 
