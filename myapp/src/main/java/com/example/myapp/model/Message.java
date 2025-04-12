@@ -29,10 +29,4 @@ public class Message {
     public void setContent(String content){
         this.content = content;
     }
-
-    @Override
-    public String toString() {
-        return content;
-    }
-
 }

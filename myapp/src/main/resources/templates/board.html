@@ -7,7 +7,7 @@
     <h1>SakuSaku Room01</h1>
     <div>
         <ul>
-            <li th:each="message : ${messages}" th:text="${message}"></li>
+            <li th:each="message : ${messages}" th:text="${message.content}"></li>
         </ul>
     </div>
     <div>
