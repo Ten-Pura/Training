@@ -1,0 +1,24 @@
+2025-04-13 03:07:11.076669Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]user (id bigint not null, password varchar(255), user_id varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, password varchar(255), user_id varchar(255), primary key (id)) [42001-224]
+2025-04-13 03:38:37.187666Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]user (id bigint not null, password varchar(255), user_id varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, password varchar(255), user_id varchar(255), primary key (id)) [42001-224]
+2025-04-13 03:39:02.691071Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into [*]user (password,user_id,id) values (?,?,?)"; expected "identifier"; SQL statement:
+insert into user (password,user_id,id) values (?,?,?) [42001-224]
+2025-04-13 03:44:43.411695Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]user (id bigint not null, password varchar(255), user_id varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, password varchar(255), user_id varchar(255), primary key (id)) [42001-224]
+2025-04-13 03:44:50.659584Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select u1_0.id,u1_0.password,u1_0.user_id from [*]user u1_0"; expected "identifier"; SQL statement:
+select u1_0.id,u1_0.password,u1_0.user_id from user u1_0 [42001-224]
+2025-04-13 03:45:00.160054Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into [*]user (password,user_id,id) values (?,?,?)"; expected "identifier"; SQL statement:
+insert into user (password,user_id,id) values (?,?,?) [42001-224]
+2025-04-13 03:47:19.317189Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]user (id bigint not null, password varchar(255), user_id varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, password varchar(255), user_id varchar(255), primary key (id)) [42001-224]
+2025-04-13 03:47:35.657763Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into [*]user (password,user_id,id) values (?,?,?)"; expected "identifier"; SQL statement:
+insert into user (password,user_id,id) values (?,?,?) [42001-224]
