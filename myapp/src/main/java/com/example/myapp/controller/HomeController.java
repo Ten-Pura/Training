@@ -12,6 +12,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.context.annotation.Bean;
 
 //JavaUtilityのインポート
 import java.util.ArrayList;
@@ -24,23 +27,18 @@ import java.util.List;
 public class HomeController {
     private List<String> messages = new ArrayList<String>();
 
-    //Userリポジトリの設定
+    //Appuserの依存性注入
     @Autowired
     private AppuserRepository appuserRepository;
+
+    //PasswordEncoderの依存性注入
+    @Autowired
+    PasswordEncoder passwordEncoder;
 
     //ルートにアクセスした時にindex.htmlを返す
     @RequestMapping("/")
     public String home() {
         return "index"; // src/main/resouces/static/index.html
-    }
-
-    @GetMapping("/login")
-    public String showLogin(Model model) {
-        List<Appuser> users = appuserRepository.findAll();
-        Appuser user = users.get(0);
-        model.addAttribute("user_id" , user.getUser_id());
-        model.addAttribute("password", user.getPassword());
-        return "login";
     }
 
     @GetMapping("/signup")
@@ -50,11 +48,20 @@ public class HomeController {
 
     @PostMapping("/signup")
     public String postSingup(@ModelAttribute ContactForm contactForm) {
+        //変数定義
         String user_id;
         String password;
+        String hashed;
+        //フォームのデータを取得
         user_id  = contactForm.getUser_id();
         password = contactForm.getPassword();
-        appuserRepository.save(new Appuser(user_id, password));
+        //パスワードをハッシュ化
+        hashed   = passwordEncoder.encode(password);
+        //デバッグ用に標準出力
+        System.out.println(hashed);
+        //ユーザー情報をDBに保存
+        appuserRepository.save(new Appuser(user_id, hashed));
+        //login.htmlにリダイレクト
         return "redirect:/login";
     }
 
