@@ -12,8 +12,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.context.annotation.Bean;
 
 //JavaUtilityのインポート
@@ -30,10 +28,6 @@ public class HomeController {
     //Appuserの依存性注入
     @Autowired
     private AppuserRepository appuserRepository;
-
-    //PasswordEncoderの依存性注入
-    @Autowired
-    PasswordEncoder passwordEncoder;
 
     //ルートにアクセスした時にindex.htmlを返す
     @RequestMapping("/")
@@ -56,7 +50,7 @@ public class HomeController {
         user_id  = contactForm.getUser_id();
         password = contactForm.getPassword();
         //パスワードをハッシュ化
-        hashed   = passwordEncoder.encode(password);
+        hashed   = password;
         //デバッグ用に標準出力
         System.out.println(hashed);
         //ユーザー情報をDBに保存

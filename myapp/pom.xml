@@ -64,25 +64,6 @@
       <version>3.43.2.1</version> <!-- バージョンは任意 -->
     </dependency>
 
-    <!--Spring security core-->
-    <dependency>
-	    <groupId>org.springframework.security</groupId>
-	    <artifactId>spring-security-core</artifactId>
-    </dependency>
-
-    <!-- Spring security web -->
-    <dependency>
-      <groupId>org.springframework.security</groupId>
-      <artifactId>spring-security-web</artifactId>
-    </dependency>
-    
-    <!--Spring security config-->
-    <dependency>
-      <groupId>org.springframework.security</groupId>
-      <artifactId>spring-security-config</artifactId>
-    </dependency>
-
-
   </dependencies>
 
   <build>
